@@ -1,0 +1,39 @@
+{
+  "name": "Bookmark Counter",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Shows number of bookmarks.",
+  "commands": {
+    "open": {
+      "suggested_key": {
+        "default": "Alt+Shift+Y"
+      },
+      "description": "Open page"
+    },
+    "update": {
+      "suggested_key": {
+        "default": "Alt+Shift+U"
+      },
+      "description": "Update counter"
+    }
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "128": "icon-128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "alarms",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
